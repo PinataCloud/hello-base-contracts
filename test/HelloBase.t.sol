@@ -1,5 +1,5 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.22;
 
 import {Test, console} from "forge-std/Test.sol";
 import {HelloBase} from "../src/HelloBase.sol";
