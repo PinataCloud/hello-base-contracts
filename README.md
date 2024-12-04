@@ -1,66 +1,45 @@
-## Foundry
+## Hello Base Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![og](https://hellobase.dev/og.png)
 
-Foundry consists of:
+This repo contains the smart contracts behind [HelloBase](https://hellobase.dev), primarily a `HelloBaseFactory.sol` and a `HelloBase.sol` template contract. These are purely for educational purposes and are only deployed on a testnet.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+>![WARNING] There is no security mechanism to prevent someone else from updating the greeting, as they are meant to be temporal training exercises.
 
-## Documentation
+## Development
 
-https://book.getfoundry.sh/
+Make sure you already have the [Foundry](https://book.getfoundry.sh/) toolchain installed
 
-## Usage
+Clone the repo and install dependencies.
 
-### Build
-
-```shell
-$ forge build
+```
+git clone https://github.com/PinataCloud/hello-base-contracts
+cd hello-base-contracts
+forge install
 ```
 
-### Test
+Compile the contracts
 
-```shell
-$ forge test
+```
+forge build
 ```
 
-### Format
+Run tests
 
-```shell
-$ forge fmt
+```
+forge test -vvv --gas-report
 ```
 
-### Gas Snapshots
+## Deployment
 
-```shell
-$ forge snapshot
+The factory contract will automatically deploy the template used inside of it, so all you need to do is deploy the factory.
+
+```
+forge create src/HelloBaseFactory.sol:HelloBaseFactory --rpc-url https://sepolia.base.org --private-key <PRIVATE_KEY>
 ```
 
-### Anvil
+## Contact
 
-```shell
-$ anvil
-```
+Feel free to reach out if you have any questions!
 
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+[steve@pinata.cloud](mailto:steve@pinata.cloud)
