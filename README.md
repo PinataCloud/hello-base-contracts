@@ -4,7 +4,7 @@
 
 This repo contains the smart contracts behind [HelloBase](https://hellobase.dev), primarily a `HelloBaseFactory.sol` and a `HelloBase.sol` template contract. These are purely for educational purposes and are only deployed on a testnet.
 
->![WARNING] There is no security mechanism to prevent someone else from updating the greeting, as they are meant to be temporal training exercises.
+>[!WARNING] There is no security mechanism to prevent someone else from updating the greeting, as they are meant to be temporal training exercises.
 
 ## Development
 
